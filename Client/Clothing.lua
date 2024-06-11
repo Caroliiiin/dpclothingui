@@ -27,46 +27,46 @@
 local Drawables = {
 	["Top"] = {
 		Drawable = 11,
-		Table = { Standalone = true, Male = 15, Female = 15 },
-		Emote = { Dict = "missmic4", Anim = "michael_tux_fidget", Move = 51, Dur = 1500 }
-		
+		Table = {
+			Standalone = true, Male = 15, Female = 15, },
+		Emote = { Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200 }
 	},
 	["Gloves"] = {
 		Drawable = 3,
 		Table = Variations.Gloves,
 		Remember = true,
-		Emote = { Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200 }
+		Emote = {Dict = "nmt_3_rcm-10", Anim = "cs_nigel_dual-10", Move = 51, Dur = 1200}
 	},
 	["Shoes"] = {
 		Drawable = 6,
-		Table = { Standalone = true, Male = 99, Female = 51 },
-		Emote = { Dict = "random@domestic", Anim = "pickup_low", Move = 0, Dur = 1200 }
+		Table = {Standalone = true, Male = 138, Female = 35},
+		Emote = {Dict = "random@domestic", Anim = "pickup_low", Move = 0, Dur = 1200}
 	},
 	["Neck"] = {
 		Drawable = 7,
-		Table = { Standalone = true, Male = 0, Female = 0 },
-		Emote = { Dict = "clothingtie", Anim = "try_tie_positive_a", Move = 51, Dur = 2100 }
+		Table = {Standalone = true, Male = 0, Female = 0 },
+		Emote = {Dict = "clothingtie", Anim = "try_tie_positive_a", Move = 51, Dur = 2100}
 	},
 	["Vest"] = {
 		Drawable = 9,
-		Table = { Standalone = true, Male = 0, Female = 0 },
-		Emote = { Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200 }
+		Table = {Standalone = true, Male = 0, Female = 0 },
+		Emote = {Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200}
 	},
 	["Bag"] = {
 		Drawable = 5,
-		Table = { Standalone = true, Male = 0, Female = 0 },
-		Emote = { Dict = "anim@heists@ornate_bank@grab_cash", Anim = "intro", Move = 51, Dur = 1600 }
+		Table = Variations.Bags,
+		Emote = {Dict = "anim@heists@ornate_bank@grab_cash", Anim = "intro", Move = 51, Dur = 1600}
 	},
 	["Mask"] = {
 		Drawable = 1,
-		Table = { Standalone = true, Male = 0, Female = 0 },
-		Emote = { Dict = "mp_masks@standard_car@ds@", Anim = "put_on_mask", Move = 51, Dur = 800 }
+		Table = {Standalone = true, Male = 0, Female = 0 },
+		Emote = {Dict = "mp_masks@standard_car@ds@", Anim = "put_on_mask", Move = 51, Dur = 800}
 	},
 	["Hair"] = {
 		Drawable = 2,
 		Table = Variations.Hair,
 		Remember = true,
-		Emote = { Dict = "clothingtie", Anim = "check_out_a", Move = 51, Dur = 2000 }
+		Emote = {Dict = "clothingtie", Anim = "check_out_a", Move = 51, Dur = 2000}
 	},
 }
 
@@ -74,18 +74,12 @@ local Extras = {
 	["Shirt"] = {
 		Drawable = 8,
 		Table = {
-			Standalone = true, Male = 15, Female = 15,
-		-- 	Extra = { 
-		-- 	-- 			{ Drawable = 8, Id = 15, Tex = 0, Name = "Extra Undershirt"},
-		-- 	 			{ Drawable = 3, Id = 28, Tex = 0, Name = "Extra Gloves"},
-		-- 	 			-- { Drawable = 10, Id = 0, Tex = 0, Name = "Extra Decals"},
-		-- 	  		}
-			},
+			Standalone = true, Male = 15, Female = 15, },
 		Emote = { Dict = "clothingtie", Anim = "try_tie_negative_a", Move = 51, Dur = 1200 }
 	},
 	["Pants"] = {
 		Drawable = 4,
-		Table = { Standalone = true, Male = 14, Female = 47 },
+		Table = { Standalone = true, Male = 14, Female = 15 },
 		Emote = { Dict = "re@construction", Anim = "out_of_breath", Move = 51, Dur = 1300 }
 	},
 }
@@ -324,70 +318,6 @@ function ToggleProps(which)
 		Notify(Lang("NoVariants")) return false
 	end
 end
-
--- function DrawDev() -- Draw text for all the stuff we are wearing, to make grabbing the variants of stuff much simpler for people.
--- 	local Entries = {}
--- 	for k,v in PairsKeys(Drawables) do table.insert(Entries, { Name = k, Drawable = v.Drawable }) end
--- 	for k,v in PairsKeys(Extras) do table.insert(Entries, { Name = k, Drawable = v.Drawable }) end
--- 	for k,v in PairsKeys(Props) do table.insert(Entries, { Name = k, Prop = v.Prop }) end
--- 	for k,v in pairs(Entries) do
--- 		local Ped = PlayerPedId() local Cur
--- 		if v.Drawable then
--- 			Cur = { Id = GetPedDrawableVariation(Ped, v.Drawable),  Texture = GetPedTextureVariation(Ped, v.Drawable) }
--- 		elseif v.Prop then
--- 			Cur = { Id = GetPedPropIndex(Ped, v.Prop),  Texture = GetPedPropTextureIndex(Ped, v.Prop) }
--- 		end
--- 		Text(0.2, 0.8*k/18, 0.30, "~o~"..v.Name.."~w~ = \n     ("..Cur.Id.." , "..Cur.Texture..")", false, 1)
--- 		DrawRect(0.23, 0.8*k/18+0.025, 0.07, 0.045, 0, 0, 0, 150)
--- 	end
--- end
-
--- local TestThreadActive = nil
--- function DevTestVariants(d) -- If debug mode is enabled we can try all the variants to check for scuff.
--- 	if not TestThreadActive then
--- 		Citizen.CreateThread(function()
--- 			TestThreadActive = true
--- 			local Ped = PlayerPedId()
--- 			local Drawable = Drawables[d]
--- 			local Prop = Props[d]
--- 			local Gender = IsMpPed(Ped)
--- 			if Drawable then
--- 				if Drawable.Table then
--- 					if type(Drawable.Table[Gender]) == "table" then
--- 						for k,v in PairsKeys(Drawable.Table[Gender]) do
--- 							Notify(d.." : ~o~"..k)
--- 							SoundPlay("Open")
--- 							SetPedComponentVariation(Ped, Drawable.Drawable, k, 0, 0)
--- 							Wait(300)
--- 							Notify(d.." : ~b~"..v)
--- 							SoundPlay("Close")
--- 							SetPedComponentVariation(Ped, Drawable.Drawable, v, 0, 0)
--- 							Wait(300)
--- 						end
--- 					end
--- 				end
--- 			elseif Prop then
--- 				if Prop.Variants then
--- 					for k,v in PairsKeys(Prop.Variants[Gender]) do
--- 						Notify(d.." : ~o~"..k)
--- 						SoundPlay("Open")
--- 						SetPedPropIndex(Ped, Prop.Prop, k, 0, true)
--- 						Wait(300)
--- 						Notify(d.." : ~b~"..v)
--- 						SoundPlay("Close")
--- 						SetPedPropIndex(Ped, Prop.Prop, v, 0, true)
--- 						Wait(300)
--- 						ClearPedProp(Ped, Prop.Prop)
--- 						Wait(200)
--- 					end
--- 				end
--- 			end
--- 			TestThreadActive = false
--- 		end)
--- 	else
--- 		Notify("Already testing variants.")
--- 	end
--- end
 
 for k,v in pairs(Config.Commands) do
 	RegisterCommand(k, v.Func)

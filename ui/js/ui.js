@@ -79,7 +79,7 @@ function sleep(milliseconds) {
 gtaclickaudio = function () {
     var audio = document.getElementById("audio1");
     audio.volume = 0.4;
-    audio.play();
+    /* audio.play(); */
 }
 
 updateclothing = function (clot) {

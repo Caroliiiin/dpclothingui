@@ -71,11 +71,16 @@ RegisterNUICallback('reset', function(data, cb)
     cb('ok')
 end)
 
-
+RegisterCommand('szclothing', function()
+	if not isDead then
+		ShowClothingUI()
+	end
+end, false)
+RegisterCommand('refreshcc', function()
+end)
 
 Citizen.CreateThread(function()
-    RegisterKeyMapping('+szclothing', 'Toggle Clothing', 'keyboard', Config.NUI.DefultKey)
-    RegisterCommand('+szclothing', ShowClothingUI, false)
+    RegisterKeyMapping('szclothing', 'Toggle Clothing', 'keyboard', Config.NUI.DefultKey)
 end)
 
 function ShowClothingUI()

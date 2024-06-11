@@ -76,8 +76,9 @@ RegisterCommand('szclothing', function()
 		ShowClothingUI()
 	end
 end, false)
-RegisterCommand('refreshcc', function()
-end)
+
+RegisterCommand('refreshcc', function() end)
+RegisterCommand('desccircle', function() end)
 
 Citizen.CreateThread(function()
     RegisterKeyMapping('szclothing', 'Toggle Clothing', 'keyboard', Config.NUI.DefultKey)

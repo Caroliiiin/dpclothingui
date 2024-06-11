@@ -1,7 +1,7 @@
 fx_version 'bodacious'
 game 'gta5'
-description 'dpClothing+ With UI'
-author 'dullpear'
+description 'Fixed Version of dpClothing+ With UI'
+author 'dullpear / Caroliin'
 lua54 'yes'
 
 client_scripts {

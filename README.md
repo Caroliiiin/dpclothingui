@@ -1,12 +1,12 @@
 # dpclothing with UI
 
 <img src="https://em-content.zobj.net/source/google/387/flag-germany_1f1e9-1f1ea.png" width="20" title="German"> Dies ist eine korrigierte Version von dpclothing+UI. 
-Ursprünglicher Autor „dullpear“. Korrigiert von Caroliin
+<p>Ursprünglicher Autor „dullpear“. Korrigiert von Caroliin.</p>
 Diese Version nutzt ein schöneres Interface zum an-/ausziehen von Klamottenkomponenten.
 
 ___________________________________________________________________________________________________________________________________________________________________________________________________
 <img src="https://em-content.zobj.net/source/google/387/flag-united-states_1f1fa-1f1f8.png" width="20" title="English"> This is a fixed Version of dpclothing+UI. 
-Original Author "dullpear". Fixed by Caroliin
+<p>Original Author "dullpear". Fixed by Caroliin.</p>
 This version uses a nicer interface for putting on/off clothing components.
 
 ___________________________________________________________________________________________________________________________________________________________________________________________________

@@ -12,7 +12,7 @@ This version uses a nicer interface for putting on/off clothing components.
 ___________________________________________________________________________________________________________________________________________________________________________________________________
 
 <p align="center">
-  <img align="center" src="https://i.postimg.cc/9C4tknNz/Bild-2024-06-11-163515635.png" title="Nackt lebts sich am Besten"> </p>
+  <img align="center" src="https://github.com/Caroliiiin/dpclothingui/blob/main/ui/imgs/github_cover.png" title="Nackt lebts sich am Besten"> </p>
 
 <a href="https://forum.cfx.re/t/dpclothing-1-0-3-clothing-variations-and-toggles-gloves-vest-top-hair-bag-and-more/1326317" target="_blank">Original Script / dpclothing </a>
 
